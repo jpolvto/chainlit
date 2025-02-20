@@ -150,7 +150,7 @@ class Element:
         object_key = e_dict.get("objectKey")
         chainlit_key = e_dict.get("chainlitKey")
         display = e_dict.get("display", "inline")
-        mime_type = e_dict.get("type", "")
+        mime = e_dict.get("mime", "")
 
         # Common parameters for all element types
         common_params = {
@@ -163,7 +163,7 @@ class Element:
             "object_key": object_key,
             "chainlit_key": chainlit_key,
             "display": display,
-            "mime": mime_type,
+            "mime": mime,
         }
 
         if type == "image":

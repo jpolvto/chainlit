@@ -284,7 +284,8 @@ class ChainlitEmitter(BaseChainlitEmitter):
                         "path": str(file["path"]),
                         "chainlitKey": file["id"],
                         "display": "inline",
-                        "type": file["type"],
+                        "type": Element.infer_type_from_mime(file["type"]),
+                        "mime": file["type"],
                     }
                 )
                 for file in files
